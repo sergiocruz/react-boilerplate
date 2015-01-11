@@ -2,7 +2,7 @@
 I love how React allows you render apps on the server and have the client take on from where the server left it.
 My goal for this project is to have a lean boilerplate so I can use it to start my next ReactJS apps.
 
-## Tools used
+## Tech stack
 
 This project relies on the following technologies:
 - [ReactJS](https://github.com/facebook/react)
