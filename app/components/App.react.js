@@ -1,12 +1,11 @@
 'use strict';
 
-var $ = require('jquery');
 var React = require('react');
+var Navbar = require('./Navbar');
 
 // Router
 var Router       = require('react-router');
 var RouteHandler = Router.RouteHandler;
-var Link         = Router.Link;
 
 // App
 var ReactApp = module.exports = React.createClass({
@@ -28,42 +27,37 @@ var ReactApp = module.exports = React.createClass({
   componentDidMount: function() {},
 
   /**
-   * Custom method: adds message by json
-   * @return {Void}
-   */
-  _addMessage: function() {
-
-    var self = this;
-
-    $.post('/api/messages', function(json) {
-
-      // Including new message
-      self.state.messages.push(json.message);
-
-      // Set state
-      self.setState({
-        messages: self.state.messages
-      });
-
-    });
-  },
-
-  /**
    * Renders component
    * @return {React}
    */
   render: function() {
     return (
+      /* jshint ignore:start */
       <div className="react-app">
 
-        <ul>
-          <li><Link to="app">Home</Link></li>
-          <li><Link to="dashboard">Dashboard</Link></li>
-        </ul>
+        <div className="row">
+          <div className="large-12 columns">
 
-        <RouteHandler/>
+            <Navbar />
+
+            <h1>
+              React Sergio&nbsp;
+              <small>SSR boilerplate</small>
+            </h1>
+
+            <hr />
+
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="large-12 columns">
+            <RouteHandler/>
+          </div>
+        </div>
 
       </div>
+      /* jshint ignore:end */
     );
   }
 });
