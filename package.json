@@ -1,7 +1,7 @@
 {
   "name": "react-sergio",
   "version": "0.0.1",
-  "description": "",
+  "description": "Playing around with server-side rendering with React",
   "main": "server.js",
   "scripts": {
     "watch": "watchify app/client.js -o public/js/bundle.js -v",

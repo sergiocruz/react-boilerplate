@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello React - Sergio</title>
+  <link rel="stylesheet" href="/vendor/foundation/css/normalize.css">
+  <link rel="stylesheet" href="/vendor/foundation/css/foundation.css">
+  <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-  
-  <h1>You got mail!</h1>
 
-  <div id="app-root"><%- markup %></div>
+  <div class="row">
+    <div class="large-12 columns">
 
-  <script id="initial-state" type="application/json"><%- state   %></script>
+      <div id="app-root"><%- markup %></div>
+
+      <script id="initial-state" type="application/json"><%- state   %></script>
+    </div>
+  </div>
+
+
   <script src="js/bundle.js"></script>
-
 </body>
 </html>

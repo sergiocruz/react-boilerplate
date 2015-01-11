@@ -1,0 +1,23 @@
+{
+  "name": "react-sergio",
+  "version": "0.0.1",
+  "authors": [
+    "Sergio Cruz <sergio@cruzcorp.net>"
+  ],
+  "description": "Playing around with server-side rendering with React",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.0"
+  }
+}
