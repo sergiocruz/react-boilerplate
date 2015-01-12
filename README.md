@@ -19,12 +19,12 @@ This project relies on the following technologies:
 
 3. Run `npm start` and navigate to `http://localhost:8080` on your browser
 
-## TODOS:
-- [ ] Handle NotFound cases with react-route
-- [ ] Make sure server-side will return a 404 status with invalid requests
-- [ ] Establish a clear way to rehydrate app state after client kicks in (IE. fetch list of items and transport that to view, etc.).
-
 _Attention: this project will use your default `process.env.PORT` and will fall back to port `8080` in case it is not set._
+
+## TODOS:
+- [ ] Handle `NotFound` cases with react-route
+- [ ] Make sure server-side will return a `404 http status` with invalid requests
+- [ ] Establish a clear way to rehydrate app state after client kicks in
 
 ### Suggestions?
 Do you have any suggestions on how this project could be better?
