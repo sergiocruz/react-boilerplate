@@ -7,11 +7,15 @@ require('node-jsx').install();
 var express  = require('express');
 var React    = require('react');
 var Router   = require('react-router');
+var util = require('util');
 
 // Vars used
 var app      = express();
 var port     = process.env.PORT || 8080;
 var routes   = require('./app/routes');
+
+// Not found page
+var NotFound = require('./app/components/Page.not-found');
 
 
 /**
@@ -42,6 +46,16 @@ function renderApp(req, res, next) {
   });
 
   router.run(function(Handler) {
+
+    // console.log('displayName', this.displayName);
+
+    // console.log('Handler', Handler);
+
+    // console.log('Is it the same?', Handler === NotFound);
+
+    console.log(
+      util.inspect(Handler)
+    );
 
     // TODO: how to get route state from here?
 

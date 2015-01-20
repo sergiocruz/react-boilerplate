@@ -138,13 +138,30 @@ module.exports = React.createClass({displayName: "exports",
   }
 });
 
+},{"react":"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react/react.js"}],"/Users/sergiocruz/Sites/playground/react-sergio/app/components/Page.not-found.js":[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+
+module.exports = React.createClass({
+  displayName : 'NotFound',
+  render: function() {
+    return (
+      /* jshint ignore:start */
+      React.createElement("div", null, "404 - Page not found!")
+      /* jshint ignore:end */
+    );
+  }
+});
+
 },{"react":"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react/react.js"}],"/Users/sergiocruz/Sites/playground/react-sergio/app/routes.js":[function(require,module,exports){
 'use strict';
 
-var React        = require('react');
-var Router       = require('react-router');
-var Route        = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
+var React         = require('react');
+var Router        = require('react-router');
+var Route         = Router.Route;
+var DefaultRoute  = Router.DefaultRoute;
+var NotFoundRoute = Router.NotFoundRoute;
 
 /**
  * Routes
@@ -154,12 +171,13 @@ module.exports = (
   /* jshint ignore:start */
   React.createElement(Route, {name: "app", path: "/", handler: require('./components/App.react')}, 
     React.createElement(DefaultRoute, {handler: require('./components/Page.home')}), 
-    React.createElement(Route, {path: "/about", name: "about", handler: require('./components/Page.about')})
+    React.createElement(Route, {path: "/about", name: "about", handler: require('./components/Page.about')}), 
+    React.createElement(NotFoundRoute, {name: "NotFound", handler: require('./components/Page.not-found')})
   )
   /* jshint ignore:end */
 );
 
-},{"./components/App.react":"/Users/sergiocruz/Sites/playground/react-sergio/app/components/App.react.js","./components/Page.about":"/Users/sergiocruz/Sites/playground/react-sergio/app/components/Page.about.js","./components/Page.home":"/Users/sergiocruz/Sites/playground/react-sergio/app/components/Page.home.js","react":"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react/react.js","react-router":"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react-router/modules/index.js"}],"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react-router/modules/actions/LocationActions.js":[function(require,module,exports){
+},{"./components/App.react":"/Users/sergiocruz/Sites/playground/react-sergio/app/components/App.react.js","./components/Page.about":"/Users/sergiocruz/Sites/playground/react-sergio/app/components/Page.about.js","./components/Page.home":"/Users/sergiocruz/Sites/playground/react-sergio/app/components/Page.home.js","./components/Page.not-found":"/Users/sergiocruz/Sites/playground/react-sergio/app/components/Page.not-found.js","react":"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react/react.js","react-router":"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react-router/modules/index.js"}],"/Users/sergiocruz/Sites/playground/react-sergio/node_modules/react-router/modules/actions/LocationActions.js":[function(require,module,exports){
 /**
  * Actions that modify the URL.
  */
