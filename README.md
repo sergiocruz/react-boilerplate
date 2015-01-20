@@ -22,9 +22,11 @@ This project relies on the following technologies:
 _Attention: this project will use your default `process.env.PORT` and will fall back to port `8080` in case it is not set._
 
 ## TODOS:
-- [ ] Handle `NotFound` cases with react-route
-- [ ] Make sure server-side will return a `404 http status` with invalid requests
+- [x] Handle `NotFound` cases with react-route
+- [x] Make sure server-side will return a `404 http status` with invalid requests
 - [ ] Establish a clear way to rehydrate app state after client kicks in
+- [ ] Implement [react-async](https://github.com/andreypopp/react-async) so client doesn't have to js all at once
+- [ ] Find good isomorphic/browserified `request` library for API requests
 
 ### Suggestions?
 Do you have any suggestions on how this project could be better?

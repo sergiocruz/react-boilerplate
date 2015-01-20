@@ -32,7 +32,7 @@ function renderApp(req, res, next) {
     routes: routes,
     location: req.url,
     onAbort: function (redirect) {
-      console.log('Routing Aborted');
+      console.log('Routing Aborted', redirect);
     },
     onError: function (err) {
       console.log('Routing Error');
@@ -41,9 +41,16 @@ function renderApp(req, res, next) {
     }
   });
 
-  router.run(function(Handler) {
+  router.run(function(Handler, routeState) {
 
-    // TODO: how to get route state from here?
+    // Gets our current route (last item in routeState.routes[] array)
+    var currentRoute = routeState.routes.pop();
+
+    // If name is NotFound (defined in routes.js), then throw 404 status
+    // Could have matched `currentRoute.handle === require('./components/Page.not-found')`
+    if (currentRoute.name === 'NotFound') {
+      res.status(404);
+    }
 
     // Render React to a string, passing in our fetched tweets
     var markup = React.renderToString(
