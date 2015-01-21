@@ -25,7 +25,7 @@ _Attention: this project will use your default `process.env.PORT` and will fall 
 - [x] Handle `NotFound` cases with react-route
 - [x] Make sure server-side will return a `404 http status` with invalid requests
 - [ ] Establish a clear way to rehydrate app state after client kicks in
-- [ ] Implement ~~[react-async](https://github.com/andreypopp/react-async)~~ [webpack](https://www.npmjs.com/package/webpack) so client doesn't have to js all at once (#4)
+- [ ] Implement ~~[react-async](https://github.com/andreypopp/react-async)~~ [webpack](https://www.npmjs.com/package/webpack) so client doesn't have to downlaod the js all at once (#4)
 - [x] Find good isomorphic/browserified `request` library for API requests: [superagent](https://github.com/visionmedia/superagent) is our guy!
 
 ### Suggestions?
